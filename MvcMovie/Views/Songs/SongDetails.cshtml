@@ -1,0 +1,43 @@
+﻿@model MvcMovie.Models.Songs;
+
+@{
+    ViewData["Title"] = "SongDetails";
+}
+
+<h1>Details</h1>
+
+<div>
+    <h4>Song</h4>
+    <hr />
+    <dl class="row">
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Songname)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Songname)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.SongAuthor)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.SongAuthor)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.SongGenre)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.SongGenre)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.SongRelaeaseDate)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.SongRelaeaseDate)
+        </dd>
+
+    </dl>
+</div>
+<div>
+    <a asp-action="Edit" asp-route-id="@Model.Id">Edit</a> |
+    <a asp-action="Index">Back to List</a>
+</div>

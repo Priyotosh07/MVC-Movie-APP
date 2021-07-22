@@ -1,0 +1,40 @@
+﻿@model MvcMovie.Models.Songs;
+@{
+    ViewData["Title"] = "DeleteSong";
+}
+
+<div>
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Songname)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Songname)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.SongAuthor)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.SongAuthor)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.SongGenre)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.SongGenre)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.SongRelaeaseDate)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.SongRelaeaseDate)
+        </dd>
+
+    </dl>
+
+    <form asp-action="DeleteSong">
+        <input type="hidden" asp-for="Id" />
+        <input type="submit" value="DELETE" class="btn btn-danger btn-sm" /> 
+        @*<a asp-action="Index" class="btn btn-danger">NO</a>*@
+    </form>
+</div> 

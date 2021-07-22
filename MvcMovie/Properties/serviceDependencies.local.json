@@ -1,0 +1,20 @@
+{
+  "dependencies": {
+    "mssql1": {
+      "type": "mssql.local",
+      "connectionId": "MvcMovieContext"
+    },
+    "mssql2": {
+      "type": "mssql.local",
+      "connectionId": "MovieDBContextConnection"
+    },
+    "mssql3": {
+      "type": "mssql.local",
+      "connectionId": "MvcMovieUserDbContextContextConnection"
+    },
+    "mssql4": {
+      "type": "mssql.local",
+      "connectionId": "ConnectionStrings:MvcMovieUserDbContext1Connection"
+    }
+  }
+}

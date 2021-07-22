@@ -1,0 +1,27 @@
+﻿@model MvcMovie.Models.MovieGenreViewModel
+
+@{
+    ViewData["Title"] = "Private";
+}
+
+
+
+
+<div class="container">
+    <div class="row">
+
+        @foreach (var item in Model.Movies)
+        {
+            <div class="card" style="width: 18rem;">
+                <img class="card-img-top" src="@item.CoverPhoto" alt="Card image cap">
+                <div class="card-body">
+                    <h5 class="card-title">@item.Title</h5>
+                   
+                </div>
+            </div>
+        }
+
+
+    </div>
+
+</div>

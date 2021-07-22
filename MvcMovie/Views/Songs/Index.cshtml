@@ -1,0 +1,37 @@
+﻿@model IEnumerable<MvcMovie.Models.Songs>
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h4>Songs List</h4>
+<hr />
+<h4>
+    <a asp-action="AddSongs">Add Songs</a>
+</h4>
+<div>
+    <table class="table table-responsive table-bordered panel-primary">
+        <thead>
+            <th>Song Name</th>
+            <th>Song Author</th>
+            <th>Song Genre</th>
+            <th>Song Release Date</th>
+        </thead>
+        <tbody>
+            @foreach (var item in Model)
+            {
+                <tr>
+                    <td>@Html.DisplayFor(model => item.Songname)</td>
+                    <td>@Html.DisplayFor(model => item.SongAuthor)</td>
+                    <td>@Html.DisplayFor(model => item.SongGenre)</td>
+                    <td>@Html.DisplayFor(model => item.SongRelaeaseDate)</td>
+                    <td>
+                        <a asp-action="EditSong" asp-route-id="@item.Id">Edit</a>|
+                        <a asp-action="DeleteSong" asp-route-id="@item.Id" onclick="return confirm('Are you want to leave this page to delete this song:@item.Songname')">Delete</a>|
+                        <a asp-action="SongDetails" asp-route-id="@item.Id">Details</a>
+                    </td>
+                </tr>
+             }
+        </tbody>
+    </table>
+</div>
+

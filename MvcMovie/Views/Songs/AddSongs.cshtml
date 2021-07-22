@@ -1,0 +1,43 @@
+﻿@model MvcMovie.Models.Songs
+
+@{
+    ViewData["Title"] = "AddSongs";
+}
+
+<h2>Add Group Meeting</h2>
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="AddSongs">
+            <div class="">
+                <label asp-for="Songname" class="control-label"></label>
+                <input asp-for="Songname" class="form-control" />
+                <span class="alert-danger" asp-validation-for="Songname"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="SongAuthor" class="control-label"></label>
+                <input asp-for="SongAuthor" class="form-control" />
+                <span class="alert-danger" asp-validation-for="SongAuthor"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="SongGenre" class="control-label"></label>
+                <input asp-for="SongGenre" class="form-control" />
+                <span class="alert-danger" asp-validation-for="SongGenre"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="SongRelaeaseDate" class="control-label"></label>
+                <input asp-for="SongRelaeaseDate" class="form-control" />
+                <span class="alert-danger" asp-validation-for="SongRelaeaseDate"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Create Song List" class="btn btn-success btn-sm" />
+            </div>
+            
+        </form>
+    </div>
+    <div class="col-md-8">
+
+    </div>
+</div>
+<div>
+    <a asp-action="Index">Back To List</a>
+</div> 

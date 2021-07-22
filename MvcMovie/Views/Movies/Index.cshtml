@@ -1,0 +1,46 @@
+﻿@model MvcMovie.Models.MovieGenreViewModel
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<p>
+    <a asp-action="Create">Create New</a>
+</p>
+<form asp-controller="Movies" asp-action="Index">
+    <p>
+       Genre : <select asp-for="MovieGenre" asp-items="Model.Genres">
+            <option value="">All</option>
+        </select>
+    </p>
+    
+    <p>
+        Title : <input type="Text" name="SearchString" />
+        <input type="Submit" value="Filter" />
+    </p>
+
+</form>
+
+<div class="container">
+    <div class="row">
+
+        @foreach (var item in Model.Movies)
+        {
+            <div class="card" style="width: 18rem;">
+                <img class="card-img-top" src="@item.CoverPhoto" alt="Card image cap">
+                <div class="card-body">
+                    <h5 class="card-title">@item.Title</h5>
+                    <a asp-action="Edit" asp-route-id="@item.ID">Edit</a> |
+                    <a asp-action="Details" asp-route-id="@item.ID">Details</a> |
+                    <a asp-action="Delete" asp-route-id="@item.ID">Delete</a>
+                </div>
+            </div>
+        }
+
+
+    </div>
+
+</div>
+
+
+
