@@ -7,6 +7,13 @@ a.navbar-brand {
   word-break: break-all;
 }
 
+body {
+    background-image: url('/wwwroot/movie_collage.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+
 /* Provide sufficient contrast against white background */
 a {
   color: #0366d6;
@@ -23,6 +30,8 @@ a {
   background-color: #1b6ec2;
   border-color: #1861ac;
 }
+
+
 
 /* Sticky footer styles
 -------------------------------------------------- */

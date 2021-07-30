@@ -9,6 +9,14 @@
     {
       "library": "jquery-validation-unobtrusive@3.2.12",
       "destination": "wwwroot/jquery-validation-unobtrusive/"
+    },
+    {
+      "library": "font-awesome@5.15.3",
+      "destination": "wwwroot/lib/font-awesome/"
+    },
+    {
+      "library": "ionicons@5.5.2",
+      "destination": "wwwroot/lib/ionicons/"
     }
   ]
 }
